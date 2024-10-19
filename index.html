@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abyss</title>
+    <link rel="icon" href="favicon.png" type="image/png"> <!-- Подключение фавикона -->
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Путь к стилям -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-container">
+        <video class="bg-video" id="video1" muted loop>
+            <source src="videos/gif1.mp4" type="video/mp4">
+        </video>
+        <video class="bg-video" id="video2" muted loop>
+            <source src="videos/gif2.mp4" type="video/mp4">
+        </video>
+        <video class="bg-video" id="video3" muted loop>
+            <source src="videos/gif3.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="es-homepage-center-menu-container">
+        <img src="images/logo.png" alt="Abyss Logo" class="brand-logo"> <!-- Логотип -->
+        <div class="es-homepage-center-menu">
+            <a href="portfolio.html" class="es-button">Portfolio</a>
+            <a href="Process.html" class="es-button">Process</a>
+            <a href="About.html" class="es-button">About</a>
+        </div>
+
+        <!-- Кнопка для включения/выключения звука -->
+        <a id="es-staticnoise-btn" class="es-sound-allow-trigger es-sound-allow-trigger--showing">allow sound</a>
+    </div>
+
+    <!-- Аудиофайл -->
+    <audio id="background-audio" src="audio.mp3" loop></audio>
+
+    <script src="scripts/script.js"></script> <!-- Путь к скрипту -->
+</body>
+</html>

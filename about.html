@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - Abyss</title>
+    <link rel="icon" href="favicon.png" type="image/png"> <!-- Подключение фавикона -->
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Общие стили -->
+    <link rel="stylesheet" href="styles/about.css"> <!-- Стили для страницы "О нас" -->
+    <link href="https://fonts.googleapis.com/css2?family=Spacemono&display=swap" rel="stylesheet"> <!-- Только Spacemono -->
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Фоновый контейнер с видео -->
+    <div class="background-container">
+        <video class="bg-video" id="video1" muted loop>
+            <source src="videos/gif1.mp4" type="video/mp4">
+        </video>
+        <video class="bg-video" id="video2" muted loop>
+            <source src="videos/gif2.mp4" type="video/mp4">
+        </video>
+        <video class="bg-video" id="video3" muted loop>
+            <source src="videos/gif3.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Навигационная панель -->
+    <header class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="navbar-button">Home</a>
+        </div>
+        <div class="navbar-center">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Abyss Logo" class="brand-logo">
+            </a>
+        </div>
+        <div class="navbar-right">
+            <nav class="nav-links">
+            </nav>
+        </div>
+    </header>
+
+    <!-- Геройский раздел (Hero Section) -->
+    <section class="hero-header">
+        <div class="hero-content">
+            <h1>О нас</h1>
+            <p>Узнайте больше о нашем бренде и основателе.</p>
+        </div>
+    </section>
+
+    <!-- Основной контент страницы "О нас" -->
+    <main class="about-container">
+        <!-- Раздел Основная Информация о Компании -->
+        <section class="company-info" data-aos="fade-up">
+            <h2 class="section-title">Основная Информация о Компании</h2>
+            <p><strong>Название:</strong> Abyss</p>
+            <p><strong>Год основания:</strong> 2024</p>
+            <p><strong>Штаб-квартира:</strong> Бендеры</p>
+        </section>
+
+        <!-- Раздел Команда -->
+        <section class="team" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="section-title">Команда</h2>
+            <div class="team-member">
+                <img src="images/founder.jpg" alt="Владислав Александрович Харченко" class="team-photo" loading="lazy">
+                <h3 class="member-name">Владислав Александрович Харченко</h3>
+                <p class="member-role">Основатель</p>
+            </div>
+        </section>
+
+        <!-- Раздел Продукты и Услуги -->
+        <section class="products-services" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="section-title">Продукты и Услуги</h2>
+            <p>Мы предлагаем концепты и образы, которые помогают нашим клиентам выразить свою индивидуальность и стиль.</p>
+        </section>
+    </main>
+
+    <!-- Аудиофайл -->
+    <audio id="background-audio" src="audio.mp3" loop></audio>
+
+    <!-- Кнопка для включения/выключения звука -->
+    <a id="es-staticnoise-btn" class="es-sound-allow-trigger es-sound-allow-trigger--showing">Allow Sound</a>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Длительность анимации в миллисекундах
+            once: true // Анимация запускается только один раз при прокрутке
+        });
+    </script>
+
+    <script src="scripts/script.js"></script> <!-- Общий скрипт -->
+</body>
+</html>
