@@ -1,0 +1,249 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: lowercase;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'spacemono', courier;
+    background-color: #1c1c1c; /* Темно-серый фон */
+}
+
+/* Фоновый контейнер */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    background-color: #1c1c1c; /* Темно-серый фон */
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    z-index: 1; /* Это помогает управлять видимостью */
+    transition: opacity 2s ease-in-out; /* Плавный переход */
+}
+
+.bg-video.active {
+    opacity: 1;
+    z-index: 2; /* Активное видео будет сверху */
+}
+
+/* Центрированные кнопки */
+.es-homepage-center-menu-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 110;
+    flex-direction: column;
+}
+
+.es-homepage-center-menu {
+    display: flex;
+    pointer-events: auto;
+}
+
+.es-homepage-center-menu .es-button:first-child {
+    margin-left: 0;
+}
+
+.es-homepage-center-menu .es-button {
+    padding: 5px 15px;
+    border: 1px solid #000;
+    border-radius: 2.5em;
+    color: #000;
+    margin-left: 5px;
+    background-color: rgba(231, 236, 234, .5);
+    pointer-events: auto;
+}
+
+.es-homepage-center-menu a {
+    color: black;
+    text-decoration: none;
+}
+
+.es-button--loop {
+    background-color: rgba(231, 236, 234, .5);
+}
+
+.es-button {
+    padding: 5px 15px;
+    border: 1px solid #000;
+    border-radius: 2.5em;
+    color: #000;
+    margin-left: 5px;
+    background-color: rgba(231, 236, 234, .5);
+}
+
+/* Кнопка звука */
+#es-staticnoise-btn {
+    color: black;
+    padding: 5px 15px;
+    background-color: rgba(73, 74, 74, .3);
+    border-radius: 2.5em;
+    margin-top: 20px; /* Отступ сверху для кнопки */
+    display: inline-block;
+    pointer-events: auto;
+}
+
+/* Плавное движение кнопки звука */
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+/* styles/process.css */
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    /* Навигационная панель */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+    }
+    
+    .navbar-left,
+    .navbar-right {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navbar-button,
+    .nav-link {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .navbar-center {
+        margin: 10px 0;
+    }
+    
+    .brand-logo {
+        height: 40px; /* Уменьшение размера логотипа */
+    }
+    
+    /* Геройский раздел */
+    .hero-header {
+        height: 250px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    
+    .hero-content p {
+        font-size: 1em;
+    }
+    
+    /* Основной контент */
+    .process-container {
+        padding: 80px 20px 20px 20px;
+        margin-top: 60px; /* Уменьшенный отступ */
+    }
+    
+    .process-title {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .process-icon img.styled-image {
+        border-radius: 10px;
+    }
+    
+    .process-step-title {
+        font-size: 1.3em;
+    }
+    
+    .process-step-description {
+        font-size: 0.95em;
+    }
+    
+    /* Кнопка звука */
+    #es-staticnoise-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+/* Стили для скроллбара в WebKit-браузерах */
+::-webkit-scrollbar {
+    width: 6px; /* Ширина вертикального скроллбара */
+    height: 6px; /* Высота горизонтального скроллбара */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Цвет фона трека */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000; /* Цвет ползунка */
+    border-radius: 3px; /* Скругление углов */
+    border: 1px solid #000000; /* Обводка ползунка */
+}
+
+/* Стили для горизонтального скроллбара в WebKit-браузерах */
+::-webkit-scrollbar-horizontal {
+    height: 6px;
+}
+
+::-webkit-scrollbar-horizontal-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-horizontal-thumb {
+    background-color: #000000;
+    border-radius: 3px;
+    border: 1px solid #000000;
+}
+
+/* Стилизация скроллбаров в Firefox */
+body {
+    scrollbar-width: thin; /* Толщина скроллбара: auto | thin | none */
+    scrollbar-color: #000000 transparent; /* Цвет ползунка и трека */
+}
+
+/* Стилизация скроллбаров для других элементов (опционально) */
+.process-container {
+    scrollbar-width: thin;
+    scrollbar-color: #000000 transparent;
+}
+
+.process-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.process-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.process-container::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 3px;
+    border: 1px solid #000000;
+}
